@@ -1,22 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solana Transaction Sender</title>
+    <title>Send Solana Transaction</title>
 </head>
 <body>
-    <h1>Solana Transaction Sender</h1>
+    <h1>Send Solana Transaction</h1>
     <form action="/send_transaction" method="post">
         <label for="sender_private_key">Sender's Private Key:</label><br>
-        <input type="text" id="sender_private_key" name="sender_private_key" required><br><br>
-
+        <input type="text" id="sender_private_key" name="sender_private_key"><br>
         <label for="recipient_public_key">Recipient's Public Key:</label><br>
-        <input type="text" id="recipient_public_key" name="recipient_public_key" required><br><br>
-
-        <label for="amount">Amount (in minimal units):</label><br>
-        <input type="number" id="amount" name="amount" required><br><br>
-
+        <input type="text" id="recipient_public_key" name="recipient_public_key"><br>
+        <label for="amount">Amount (in lamports):</label><br>
+        <input type="number" id="amount" name="amount"><br><br>
         <input type="submit" value="Send Transaction">
     </form>
 </body>
