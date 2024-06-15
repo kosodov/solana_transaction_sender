@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Result</title>
+</head>
+<body>
+    <h1>Transaction Result</h1>
+    {% if success %}
+        <p>Transaction sent successfully to {{ recipient_public_key }}.</p>
+        <p>Transaction ID: {{ transaction_id }}</p>
+    {% else %}
+        <p>Failed to send transaction:</p>
+        <p>{{ error_message }}</p>
+    {% endif %}
+    <a href="/">Back to Home</a>
+</body>
+</html>
