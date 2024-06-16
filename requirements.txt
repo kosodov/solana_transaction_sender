@@ -1,0 +1,4 @@
+solana
+account
+httpcore==0.13.0
+uvicorn==0.11.2

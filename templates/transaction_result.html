@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h1>Transaction Result</h1>
+    {% if success %}
+        <p class="success">Transaction sent successfully to {{ recipient_public_key }}.</p>
+        <p>Transaction ID: {{ transaction_id }}</p>
+        <p>Number of successful transactions: {{ num_successful_transactions }}</p>
+        <p>Successful recipient private keys:</p>
+        <ul>
+            {% for private_key in successful_transactions %}
+                <li>{{ private_key }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p class="error">Failed to send transaction:</p>
+        <p>{{ error_message }}</p>
+    {% endif %}
+    <a href="/">Back to Home</a>
+</body>
+</html>
